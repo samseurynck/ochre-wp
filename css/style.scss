@@ -1,0 +1,173 @@
+/**
+ * Theme Name:       	Ochre Bakery
+ * Theme URI:        	http://.com
+ * Version:          	1.0.0
+ * Author:           	Samantha Griffith
+ */
+
+@import "screen";
+@import "normalize";
+@import "init";
+@import "typography";
+@import "font-awesome";
+html {
+  font-size: 20px; // 1REM
+  @media screen and (max-width: $break-medium) {
+    font-size: 15px; // 1REM
+  }
+}
+
+// SITE SPACING
+$spacing: 20px;
+$left-proportion: 40%;
+$right-proportion: 60%;
+$twenty-percent: 20%;
+$width: width;
+$border: 1.5px dashed;
+$nav-height: 100px;
+
+// SITE COLORS
+$black: #020302;
+
+// Global
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+} // START HERE
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+	cursor: default;
+	font-family: 'Libre Baskerville', serif;
+
+}
+
+.container,
+.text {
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3
+}
+
+.st0 {
+  fill: white;
+}
+
+.shape-container {
+  position: absolute;
+}
+
+#shape-tl {
+  width: 51%;
+  height: 102vh;
+  background: #874E11;
+  left: -5px;
+  z-index: 1;
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    mix-blend-mode: screen;
+  }
+}
+
+#shape-tr {
+  width: 48%;
+  height: 100vh;
+  right: 0;
+}
+
+#shape-bl {
+  width: 50%;
+  height: 102vh;
+  left: 0;
+  bottom: 0;
+}
+
+#shape-br {
+  width: 48%;
+  height: 102vh;
+  right: 0;
+  bottom: 0;
+}
+
+.text {
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+
+  .block1 {
+    width: 50%;
+    height: 100vh;
+    margin-left: 50%;
+    padding: 0 3em 0 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .block2 {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .block3 {
+    width: 30%;
+    height: 80vh;
+    margin: 5%;
+    .about-subtitle {
+      font-size: 1em;
+    }
+    .about-text {
+      font-size: .75em;
+    }
+  }
+}
+
+h1 {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: .75em;
+}
+
+.hours-list,
+.location-list {
+  font-size: .75em;
+  line-height: 1em;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1em;
+}

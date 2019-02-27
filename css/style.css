@@ -2641,11 +2641,14 @@ ul {
 html,
 body {
   height: 100%;
+  cursor: default; }
+
+html,
+body {
+  height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0;
-  cursor: default;
-  font-family: 'Libre Baskerville', serif; }
+  padding: 0; }
 
 .container,
 .text {
@@ -2665,7 +2668,9 @@ svg {
   fill: white; }
 
 .shape-container {
-  position: absolute; }
+  position: absolute;
+  /*   max-height: 500px;
+   */ }
 
 #shape-tl {
   width: 51%;
@@ -2682,7 +2687,8 @@ svg {
     z-index: 2;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    mix-blend-mode: screen; }
+    mix-blend-mode: screen;
+    /*     opacity:.5;*/ }
 
 #shape-tr {
   width: 48%;
@@ -2705,10 +2711,14 @@ svg {
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
-  color: white; }
+  color: white;
+  /*   background: green;
+   */ }
   .text .block1 {
     width: 50%;
     height: 100vh;
+    /*     background: tomato;
+     */
     margin-left: 50%;
     padding: 0 3em 0 3em;
     display: flex;
@@ -2717,6 +2727,8 @@ svg {
   .text .block2 {
     width: 50%;
     height: 100vh;
+    /*     background: black;
+     */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2724,6 +2736,8 @@ svg {
   .text .block3 {
     width: 30%;
     height: 80vh;
+    /*     background: yellow;
+     */
     margin: 5%; }
     .text .block3 .about-subtitle {
       font-size: 1em; }
