@@ -209,129 +209,28 @@ body {
 .cf {
   *zoom: 1; }
 
-@font-face {
-  font-family: Reader;
-  src: url("fonts/reader-regular-webfont.woff2") format("woff2"), url("fonts/reader-regular-webfont.woff") format("woff"); }
-@font-face {
-  font-family: ReaderBold;
-  src: url("fonts/reader-bold-webfont.woff2") format("woff2"), url("fonts/reader-bold-webfont.woff") format("woff"); }
-body {
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Reader', Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.2; }
-
-h1, h2, h3, h4, h5 {
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-  font-weight: 300; }
-
-h1 {
-  font-size: 1.5em;
-  letter-spacing: .75px;
-  font-weight: 700;
-  color: white; }
-
-h2 {
-  font-size: 2em;
-  font-weight: 500; }
-
-h3 {
+.block1 h1 {
   font-size: 1em;
-  font-weight: 500; }
-
-a {
-  list-style: none;
-  text-decoration: none; }
-
-#collectie-link a, #collectie-link a:active, #collectie-link a:hover, #collectie-link a:visited {
-  color: #DDD4D7; }
-#collectie-link a:active, #collectie-link a:hover {
-  color: #98838A; }
-
-#portfolio-link a, #portfolio-link a:active, #portfolio-link a:hover, #portfolio-link a:visited {
-  color: #D5DADD; }
-#portfolio-link a:active, #portfolio-link a:hover {
-  color: #536164; }
-
-#maak-link a, #maak-link a:active, #maak-link a:hover, #maak-link a:visited {
-  color: #C6B6AD; }
-#maak-link a:active, #maak-link a:hover {
-  color: #946C54; }
-
-.home_nav #logo {
-  opacity: 1; }
-.home_nav a, .home_nav a:active, .home_nav a:hover, .home_nav a:visited {
-  color: #98838A;
-  opacity: 0.6; }
-.home_nav a:active, .home_nav a:hover {
-  opacity: 1; }
-
-.blue_nav #logo, .brown_nav #logo, .purple_nav #logo {
-  opacity: 1; }
-.blue_nav a, .blue_nav a:active, .blue_nav a:hover, .blue_nav a:visited, .brown_nav a, .brown_nav a:active, .brown_nav a:hover, .brown_nav a:visited, .purple_nav a, .purple_nav a:active, .purple_nav a:hover, .purple_nav a:visited {
-  color: white;
-  opacity: 0.6; }
-.blue_nav a:active, .blue_nav a:hover, .brown_nav a:active, .brown_nav a:hover, .purple_nav a:active, .purple_nav a:hover {
-  opacity: 1; }
-
-#nav_block_left_list, .nav_block_right_submenu {
-  font-size: .75em;
-  text-align: right; }
-
-main .maak_block_content {
-  color: #946C54; }
-
-.item_block_right .item_block_right_header #product_title {
-  font-size: 2em; }
-.item_block_right .item_block_right_header #product_subtitle {
-  font-size: .75em;
-  line-height: 2em; }
-.item_block_right .item_block_right_header .item_block_right_viewoptions {
-  color: #DDD4D7;
-  font-size: .75em; }
-  .item_block_right .item_block_right_header .item_block_right_viewoptions:hover {
-    color: white; }
-.item_block_right .item_block_right_header .item_block_right_viewoptions_selected {
-  color: #DDD4D7 !important; }
-  .item_block_right .item_block_right_header .item_block_right_viewoptions_selected:hover {
-    color: #98838A !important; }
-.item_block_right .item_block_right_details_specstitle, .item_block_right .item_block_right_details_orderingtitle, .item_block_right #item_block_right_details_kleuren_title {
-  font-family: 'ReaderBold';
+  letter-spacing: 2px; }
+.block1 h2 {
   font-size: .5em;
-  letter-spacing: .5px;
-  line-height: 2em;
-  text-transform: uppercase;
-  font-weight: bold; }
-.item_block_right .item_block_right_details_specslist {
-  padding-bottom: 20px;
-  font-size: .75em; }
-  .item_block_right .item_block_right_details_specslist li {
-    list-style: circle !important;
-    list-style-position: inside !important; }
-.item_block_right .item_block_right_details_orderingp {
+  letter-spacing: 1.5px; }
+.block1 .hours-list,
+.block1 .location-list {
   font-size: .75em;
-  margin: 0;
-  line-height: 1.5em; }
+  line-height: .75em;
+  letter-spacing: .5px; }
 
-#portfolio_gallery_block .block_title {
-  color: #536164;
-  padding: 20px 0 20px 20px; }
+.block2 ul {
+  font-size: 1.25em;
+  line-height: 3em; }
 
-#maak_announcement_block {
-  color: #946C54; }
-  #maak_announcement_block .maak_announcement_text h1 {
-    font-family: 'ReaderBold';
-    font-size: 3em;
-    color: #946C54; }
-  #maak_announcement_block .maak_announcement_text p {
-    font-size: 1.25em; }
-
-.catalog_content .catalog_content_banner .banner_title {
-  font-size: .75em; }
+.block3 .about-subtitle {
+  font-size: .75em;
+  line-height: 1.75em; }
+.block3 .about-text {
+  font-size: .5em;
+  line-height: 2em; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2645,7 +2544,8 @@ body {
   margin: 0;
   padding: 0;
   cursor: default;
-  font-family: 'Libre Baskerville', serif; }
+  font-family: 'Libre Baskerville', serif;
+  font-weight: lighter; }
 
 .container,
 .text {
@@ -2708,12 +2608,40 @@ svg {
   color: white; }
   .text .block1 {
     width: 50%;
-    height: 100vh;
-    margin-left: 50%;
-    padding: 0 3em 0 3em;
+    height: 80vh;
+    margin: 10vh 10vh 10vh 50%;
+    padding: 0 3em 0 4em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
+    .text .block1 h1 {
+      margin-bottom: 3em; }
+    .text .block1 h2 {
+      margin-bottom: 2.5em;
+      -ms-transform: rotate(-1deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-1deg);
+      /* Safari 3-8 */
+      transform: rotate(-1deg); }
+    .text .block1 .hours-list {
+      margin-bottom: 3em;
+      -ms-transform: rotate(-1deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-1deg);
+      /* Safari 3-8 */
+      transform: rotate(-1deg); }
+    .text .block1 .location-list {
+      -ms-transform: rotate(-1deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-1deg);
+      /* Safari 3-8 */
+      transform: rotate(-1deg); }
+    .text .block1 ul {
+      padding: 0;
+      margin: 0; }
+    .text .block1 li {
+      list-style: none;
+      margin-bottom: 1em; }
   .text .block2 {
     width: 50%;
     height: 100vh;
@@ -2722,31 +2650,19 @@ svg {
     align-items: center;
     text-align: center; }
   .text .block3 {
-    width: 30%;
-    height: 80vh;
-    margin: 5%; }
+    width: 50%;
+    height: 75vh;
+    margin: 10vh 0 15vh 0;
+    padding: 0 3em 0 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
     .text .block3 .about-subtitle {
-      font-size: 1em; }
+      margin-bottom: 1em;
+      padding-right: 50%; }
     .text .block3 .about-text {
-      font-size: .75em; }
-
-h1 {
-  font-size: 1em; }
-
-h2 {
-  font-size: .75em; }
-
-.hours-list,
-.location-list {
-  font-size: .75em;
-  line-height: 1em; }
-
-ul {
-  padding: 0;
-  margin: 0; }
-
-li {
-  list-style: none;
-  margin-bottom: 1em; }
+      padding-right: 30%; }
+      .text .block3 .about-text p {
+        padding-bottom: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */

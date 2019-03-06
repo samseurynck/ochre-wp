@@ -22,16 +22,11 @@ var ochre = {
   resize: function() {
 
     // The width is the width of the image, and the algorithm chooses the best fit.
-    $(".foo").backstretch([
+    $("#shape-tl").backstretch([
       [
-        { width: 1080, url: "path/to/image1_1080.jpg" },
-        { width: 720, url: "path/to/image1_720.jpg" },
-        { width: 320, url: "path/to/image1_320.jpg" }
-      ],
-      [
-        { width: 1080, url: "path/to/image2_1080.jpg" },
-        { width: 720, url: "path/to/image2_720.jpg" },
-        { width: 320, url: "path/to/image2_320.jpg" }
+        { width: 1080, url: "http://localhost:8081/wordpress/assets/tile.png" },
+        { width: 720, url: "http://localhost:8081/wordpress/assets/tile.png" },
+        { width: 320, url: "http://localhost:8081/wordpress/assets/tile.png" }
       ]
     ]);
 

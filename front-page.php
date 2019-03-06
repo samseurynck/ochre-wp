@@ -41,9 +41,12 @@
 		        Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit.
 		      </div>
 		      <div class="about-text">
-		        Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born
+						<p>Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born
 		        out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in
-		        Corktown, Detroit.
+		        Corktown, Detroit. </p>
+						<p>Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born
+		        out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in
+		        Corktown, Detroit. </p>
 		      </div>
 		    </div>
 
@@ -58,7 +61,7 @@
 		<path class="st0" d="M-144,2v609h502V2H-144z M354.5,609l-496.2-12.2C-147,201.8-62.3,4.5,112.5,4.5S367.8,205.8,354.5,609z"
 			/>
 		</svg>
-		    <img src="http://placekitten.com/502/609">
+		    <!-- <img src="http://placekitten.com/502/609"> -->
 
 		  </div>
 

@@ -32,30 +32,17 @@ if (function_exists('add_theme_support'))
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
-
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
-
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+
+    // THESE SHOULD BE SWAPPED AT SOME POINT!!
+    wp_enqueue_script( 'plugins', "{$url}/js/plugins.min.js", array('jquery'), null, true );
+    wp_enqueue_script( 'app', "{$url}/js/app.min.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'plugins', "{$url}/x/plugins.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'app', "{$url}/x/app.js", array('jquery'), null, true );
 }
 
 /*------------------------------------*\
@@ -167,32 +154,6 @@ function add_slug_to_body_class($classes)
     }
 
     return $classes;
-}
-
-// If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
-    // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-
-    // Define Sidebar Widget Area 2
-    register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
 }
 
 // Remove wp_head() injected Recent Comment styles
