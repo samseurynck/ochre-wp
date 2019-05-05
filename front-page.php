@@ -10,57 +10,71 @@
 		      <h1>
 		        OCHRE <br>BAKERY
 		      </h1>
-		      <h2>
+		      <h2 id="hours-title">
 		        HOURS
 		      </h2>
-		      <ul class="hours-list">
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		      </ul>
-		      <h2>
+
+						<ul id="hours-list">
+						<?php if( have_rows('hours') ): while ( have_rows('hours') ) : the_row(); ?>
+
+						        <li><?php the_sub_field('days'); ?> <?php the_sub_field('opening_time'); ?> to <?php the_sub_field('closing_time'); ?></li>
+
+										<?php
+						    endwhile;
+						else :
+						endif;
+						?>
+					</ul>
+
+		      <h2 id="location-title">
 		        LOCATION
 		      </h2>
-		      <ul class="location-list">
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		        <li>rghbhdfbgfdhbgfhbg</li>
-		      </ul>
+
+					<ul id="location-list">
+					<?php if( have_rows('location') ): while ( have_rows('location') ) : the_row(); ?>
+
+									<li><?php the_sub_field('address_line'); ?></li>
+
+									<?php
+							endwhile;
+					else :
+					endif;
+					?>
+				</ul>
 		    </div>
 		    <nav class="block2">
 		      <ul>
-		        <li>cafe</li>
+						<li>Menus, wholesale orders and catering information coming soon!</li>
+		        <!-- <li>cafe</li>
 		        <li>bakery</li>
 		        <li>catering</li>
 		        <li>wholesale</li>
-		        <li>about</li>
+		        <li>about</li> -->
 		      </ul>
 		    </nav>
 		    <div class="block3">
 		      <div class="about-subtitle">
-		        Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit.
+						<div class="subtitle-short"><?php the_field('homepage_bio_subtitle_short'); ?></div>
+						<div class="subtitle-long"><?php the_field('homepage_bio_subtitle_long'); ?></div>
+		        <!-- Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. -->
 		      </div>
+
 		      <div class="about-text">
-						<p>Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born
-		        out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in
-		        Corktown, Detroit. </p>
-						<p>Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born
-		        out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in Corktown, Detroit. Ochre is a bakery and cafe born out of Astro Coffee in
-		        Corktown, Detroit. </p>
+						<div class="text-short"><?php the_field('homepage_bio_text_short'); ?></div>
+						<!-- <div class="text-medium"><?php // the_field('homepage_bio_text_medium'); ?></div> -->
+						<div class="text-long"><?php the_field('homepage_bio_text_long'); ?></div>
+
 		      </div>
 		    </div>
-
 		  </div>
 
 		  <div class="shape-container" id="shape-tl">
 
 		    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-144 2 502 609" style="enable-background:new -144 2 502 609;" xml:space="preserve" preserveAspectRatio="none">
-		<style type="text/css">
-
-		</style>
-		<path class="st0" d="M-144,2v609h502V2H-144z M354.5,609l-496.2-12.2C-147,201.8-62.3,4.5,112.5,4.5S367.8,205.8,354.5,609z"
-			/>
-		</svg>
+					<style type="text/css">
+					</style>
+					<path class="st0" d="M-144,2v609h502V2H-144z M354.5,609l-496.2-12.2C-147,201.8-62.3,4.5,112.5,4.5S367.8,205.8,354.5,609z"/>
+				</svg>
 		    <!-- <img src="http://placekitten.com/502/609"> -->
 
 		  </div>

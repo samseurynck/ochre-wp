@@ -209,28 +209,46 @@ body {
 .cf {
   *zoom: 1; }
 
+body {
+  font-family: 'BaskervilleBT-Roman', serif;
+  font-weight: normal;
+  font-style: normal; }
+
 .block1 h1 {
   font-size: 1em;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-family: 'BaskervilleBT-Roman', serif;
+  font-weight: normal;
+  font-style: normal; }
+  @media screen and (max-width: 900px) {
+    .block1 h1 {
+      font-size: 1.25em; } }
 .block1 h2 {
   font-size: .5em;
   letter-spacing: 1.5px; }
-.block1 .hours-list,
-.block1 .location-list {
+.block1 #hours-list,
+.block1 #location-list {
   font-size: .75em;
   line-height: .75em;
   letter-spacing: .5px; }
 
 .block2 ul {
-  font-size: 1.25em;
-  line-height: 3em; }
+  font-size: 1.5em;
+  line-height: 1.25em; }
 
 .block3 .about-subtitle {
-  font-size: .75em;
+  font-size: 1em;
   line-height: 1.75em; }
+  @media screen and (max-width: 900px) {
+    .block3 .about-subtitle {
+      font-size: 1em;
+      line-height: 1.5em; } }
 .block3 .about-text {
-  font-size: .5em;
-  line-height: 2em; }
+  font-size: .75em;
+  line-height: 1.5em; }
+  @media screen and (max-width: 900px) {
+    .block3 .about-text {
+      line-height: 2em; } }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2544,7 +2562,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: default;
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'BaskervilleBT-Roman', serif;
   font-weight: lighter; }
 
 .container,
@@ -2552,6 +2570,16 @@ body {
   width: 100%;
   height: 200vh;
   position: absolute; }
+  @media screen and (max-width: 900px) {
+    .container,
+    .text {
+      min-width: 700px;
+      height: 100vh; } }
+  @media screen and (max-width: 425px) {
+    .container,
+    .text {
+      min-width: 0px;
+      height: 200vh; } }
 
 svg {
   position: absolute;
@@ -2573,33 +2601,62 @@ svg {
   background: #874E11;
   left: -5px;
   z-index: 1; }
+  @media screen and (max-width: 425px) {
+    #shape-tl {
+      width: 100%;
+      height: 50vh;
+      left: 0; } }
+  @media screen and (max-width: 900px) {
+    #shape-tl {
+      height: 52vh; } }
   #shape-tl img {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 2;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    mix-blend-mode: screen; }
+    z-index: 2; }
 
 #shape-tr {
   width: 48%;
   height: 100vh;
   right: 0; }
+  @media screen and (max-width: 425px) {
+    #shape-tr {
+      width: 100%;
+      height: 50vh;
+      top: 100vh; } }
+  @media screen and (max-width: 900px) {
+    #shape-tr {
+      height: 50vh; } }
 
 #shape-bl {
   width: 50%;
   height: 102vh;
   left: 0;
   bottom: 0; }
+  @media screen and (max-width: 425px) {
+    #shape-bl {
+      width: 100%;
+      height: 50vh;
+      top: 50vh; } }
+  @media screen and (max-width: 900px) {
+    #shape-bl {
+      height: 52vh; } }
 
 #shape-br {
   width: 48%;
   height: 102vh;
   right: 0;
   bottom: 0; }
+  @media screen and (max-width: 425px) {
+    #shape-br {
+      width: 100%;
+      height: 50vh;
+      top: 150vh; } }
+  @media screen and (max-width: 900px) {
+    #shape-br {
+      height: 52vh; } }
 
 .text {
   z-index: 100;
@@ -2614,8 +2671,30 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
+    @media screen and (max-width: 900px) {
+      .text .block1 {
+        width: 50%;
+        height: 50vh;
+        justify-content: flex-end;
+        margin: 0 0 0 50%;
+        padding: 0 4em 4em 4em; } }
+    @media screen and (max-width: 425px) {
+      .text .block1 {
+        width: 100%;
+        height: 50vh;
+        top: 50vh;
+        margin: 50vh 0 0 0;
+        padding: 2em 4em 4em 4em;
+        justify-content: flex-start; } }
     .text .block1 h1 {
       margin-bottom: 3em; }
+      @media screen and (max-width: 900px) {
+        .text .block1 h1 {
+          margin-bottom: 0; } }
+      @media screen and (max-width: 425px) {
+        .text .block1 h1 {
+          text-align: center;
+          margin-bottom: 2em; } }
     .text .block1 h2 {
       margin-bottom: 2.5em;
       -ms-transform: rotate(-1deg);
@@ -2623,19 +2702,48 @@ svg {
       -webkit-transform: rotate(-1deg);
       /* Safari 3-8 */
       transform: rotate(-1deg); }
-    .text .block1 .hours-list {
+    .text .block1 #hours-title {
+      text-align: left; }
+      @media screen and (max-width: 900px) {
+        .text .block1 #hours-title {
+          text-align: right; } }
+      @media screen and (max-width: 425px) {
+        .text .block1 #hours-title {
+          text-align: left; } }
+    .text .block1 #hours-list {
       margin-bottom: 3em;
       -ms-transform: rotate(-1deg);
       /* IE 9 */
       -webkit-transform: rotate(-1deg);
       /* Safari 3-8 */
-      transform: rotate(-1deg); }
-    .text .block1 .location-list {
+      transform: rotate(-1deg);
+      text-align: left; }
+      @media screen and (max-width: 900px) {
+        .text .block1 #hours-list {
+          margin-bottom: 0;
+          text-align: right; } }
+      @media screen and (max-width: 425px) {
+        .text .block1 #hours-list {
+          text-align: left;
+          margin-bottom: 2em; } }
+    @media screen and (max-width: 900px) {
+      .text .block1 #location-title {
+        margin-left: 0; } }
+    @media screen and (max-width: 425px) {
+      .text .block1 #location-title {
+        padding-left: 40px; } }
+    .text .block1 #location-list {
       -ms-transform: rotate(-1deg);
       /* IE 9 */
       -webkit-transform: rotate(-1deg);
       /* Safari 3-8 */
       transform: rotate(-1deg); }
+      @media screen and (max-width: 900px) {
+        .text .block1 #location-list {
+          margin-left: 0; } }
+      @media screen and (max-width: 425px) {
+        .text .block1 #location-list {
+          padding-left: 40px; } }
     .text .block1 ul {
       padding: 0;
       margin: 0; }
@@ -2648,21 +2756,96 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 0 4em 0 4em;
+    color: #141731;
+    font-weight: bold; }
+    @media screen and (max-width: 900px) {
+      .text .block2 {
+        height: 50vh;
+        padding: 0 4em 1em 4em; } }
+    @media screen and (max-width: 425px) {
+      .text .block2 {
+        width: 100%;
+        height: 50vh;
+        top: 100vh;
+        padding: 0 6em 0 3em;
+        color: #874E11; } }
   .text .block3 {
     width: 50%;
-    height: 75vh;
-    margin: 10vh 0 15vh 0;
     padding: 0 3em 0 4em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    justify-content: center; }
+    @media screen and (max-width: 900px) {
+      .text .block3 {
+        height: 50vh;
+        margin: 0;
+        padding: 0 3em 0 4em; } }
+    @media screen and (max-width: 425px) {
+      .text .block3 {
+        width: 100%;
+        height: 52vh;
+        top: 100vh;
+        margin: 0;
+        display: flex; } }
     .text .block3 .about-subtitle {
       margin-bottom: 1em;
-      padding-right: 50%; }
-    .text .block3 .about-text {
       padding-right: 30%; }
-      .text .block3 .about-text p {
-        padding-bottom: 1.5em; }
+      @media screen and (max-width: 425px) {
+        .text .block3 .about-subtitle {
+          display: flex;
+          flex-direction: column;
+          justify-content: center; } }
+      @media screen and (max-width: 900px) {
+        .text .block3 .about-subtitle {
+          padding-right: 25%; } }
+      .text .block3 .about-subtitle .subtitle-long {
+        display: block; }
+        @media screen and (max-width: 1024px) {
+          .text .block3 .about-subtitle .subtitle-long {
+            display: block; } }
+        @media screen and (max-width: 425px) {
+          .text .block3 .about-subtitle .subtitle-long {
+            display: none; } }
+      .text .block3 .about-subtitle .subtitle-short {
+        display: none; }
+        @media screen and (max-width: 1024px) {
+          .text .block3 .about-subtitle .subtitle-short {
+            display: none; } }
+        @media screen and (max-width: 425px) {
+          .text .block3 .about-subtitle .subtitle-short {
+            display: block; } }
+    @media screen and (max-width: 425px) {
+      .text .block3 .about-text {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; } }
+    @media screen and (max-width: 900px) {
+      .text .block3 .about-text {
+        padding-right: 15%; } }
+    .text .block3 .about-text .text-short {
+      display: none; }
+      @media screen and (max-width: 1024px) {
+        .text .block3 .about-text .text-short {
+          display: none; } }
+      @media screen and (max-width: 900px) {
+        .text .block3 .about-text .text-short {
+          display: block; } }
+      @media screen and (max-width: 425px) {
+        .text .block3 .about-text .text-short {
+          display: block; } }
+    @media screen and (max-width: 1024px) {
+      .text .block3 .about-text .text-long {
+        display: block; } }
+    @media screen and (max-width: 900px) {
+      .text .block3 .about-text .text-long {
+        display: none; } }
+    @media screen and (max-width: 425px) {
+      .text .block3 .about-text .text-long {
+        display: none; } }
+    .text .block3 .about-text p {
+      padding-bottom: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */

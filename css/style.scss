@@ -53,7 +53,8 @@ body {
   margin: 0;
   padding: 0;
 	cursor: default;
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'BaskervilleBT-Roman', serif;
+
   font-weight: lighter;
 }
 
@@ -62,6 +63,16 @@ body {
   width: 100%;
   height: 200vh;
   position: absolute;
+
+
+  @media screen and (max-width: $break-medium) {
+    min-width: 700px;
+    height: 100vh;
+  }
+  @media screen and (max-width: $break-small-med) {
+    min-width: 0px;
+    height: 200vh;
+  }
 }
 
 svg {
@@ -87,6 +98,16 @@ svg {
   background: #874E11;
   left: -5px;
   z-index: 1;
+  // background-image: url("assets/tile.png");
+  @media screen and (max-width: $break-small-med) {
+    width:100%;
+    height:50vh;
+    left:0;
+    // background-image: url("assets/sm_tile.png");
+    }
+  @media screen and (max-width: $break-medium) {
+    height: 52vh;
+  }
   img {
     position: absolute;
     height: 100%;
@@ -94,9 +115,9 @@ svg {
     top: 0;
     left: 0;
     z-index: 2;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    mix-blend-mode: screen;
+    // -webkit-filter: grayscale(100%);
+    // filter: grayscale(100%);
+    // mix-blend-mode: screen;
   }
 }
 
@@ -104,6 +125,14 @@ svg {
   width: 48%;
   height: 100vh;
   right: 0;
+  @media screen and (max-width: $break-small-med) {
+    width:100%;
+    height: 50vh;
+    top:100vh;
+  }
+  @media screen and (max-width: $break-medium) {
+    height: 50vh;
+  }
 }
 
 #shape-bl {
@@ -111,6 +140,14 @@ svg {
   height: 102vh;
   left: 0;
   bottom: 0;
+  @media screen and (max-width: $break-small-med) {
+    width:100%;
+    height: 50vh;
+    top: 50vh;
+  }
+  @media screen and (max-width: $break-medium) {
+    height: 52vh;
+  }
 }
 
 #shape-br {
@@ -118,6 +155,14 @@ svg {
   height: 102vh;
   right: 0;
   bottom: 0;
+  @media screen and (max-width: $break-small-med) {
+    width:100%;
+    height: 50vh;
+    top: 150vh;
+  }
+  @media screen and (max-width: $break-medium) {
+    height: 52vh;
+  }
 }
 
 .text {
@@ -136,8 +181,33 @@ svg {
     flex-direction: column;
     justify-content: flex-end;
 
+    @media screen and (max-width: $break-medium) {
+      width:50%;
+      height: 50vh;
+      // top:50vh;
+      justify-content: flex-end;
+      margin: 0 0 0 50%;
+      padding: 0 4em 4em 4em;
+    }
+    @media screen and (max-width: $break-small-med) {
+      width:100%;
+      height: 50vh;
+      top:50vh;
+      margin:50vh 0 0 0;
+      padding: 2em 4em 4em 4em;
+      justify-content: flex-start;
+    }
+
     h1 {
       margin-bottom: 3em;
+
+      @media screen and (max-width: $break-medium) {
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: $break-small-med) {
+        text-align: center;
+        margin-bottom: 2em;
+      }
     }
 
     h2{
@@ -146,13 +216,51 @@ svg {
 
     }
 
-    .hours-list{
-      margin-bottom: 3em;
-      @include negRotate;
+    #hours-title{
+      text-align: left;
+
+      @media screen and (max-width: $break-medium) {
+        text-align: right;
+      }
+      @media screen and (max-width: $break-small-med) {
+        text-align: left;
+      }
     }
 
-    .location-list{
+    #hours-list{
+      margin-bottom: 3em;
       @include negRotate;
+      text-align: left;
+
+      @media screen and (max-width: $break-medium) {
+        margin-bottom: 0;
+        text-align: right;
+      }
+      @media screen and (max-width: $break-small-med) {
+        text-align: left;
+        margin-bottom: 2em;
+      }
+    }
+
+    #location-title{
+      @media screen and (max-width: $break-medium) {
+        // margin-left: $spacing*2;
+        margin-left: 0;
+      }
+      @media screen and (max-width: $break-small-med) {
+        padding-left: $spacing*2;
+      }
+    }
+
+    #location-list{
+      @include negRotate;
+      @media screen and (max-width: $break-medium) {
+        // margin-left: $spacing*2;
+        margin-left: 0;
+      }
+      @media screen and (max-width: $break-small-med) {
+        padding-left: $spacing*2;
+      }
     }
 
     ul {
@@ -172,24 +280,89 @@ svg {
     justify-content: center;
     align-items: center;
     text-align: center;
-    ul{
-
+    padding: 0 4em 0 4em;
+    color: #141731;
+    font-weight: bold;
+    @media screen and (max-width: $break-medium) {
+      height: 50vh;
+      padding: 0 4em 1em 4em;
+    }
+    @media screen and (max-width: $break-small-med) {
+      width:100%;
+      height: 50vh;
+      top:100vh;
+      padding: 0 6em 0 3em;
+      color: #874E11;
     }
   }
   .block3 {
     width: 50%;
-    height: 75vh;
-    margin: 10vh 0 15vh 0;
+    // height: 75vh;
+    // margin: 10vh 0 15vh 0;
     padding: 0 3em 0 4em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    @media screen and (max-width: $break-medium) {
+      height: 50vh;
+      margin:0;
+      padding: 0 3em 0 4em;
+    }
+    @media screen and (max-width: $break-small-med) {
+      width:100%;
+      height: 52vh;
+      top:100vh;
+      margin: 0;
+      display: flex;
+    }
+
     .about-subtitle {
       margin-bottom: 1em;
-      padding-right: 50%;
+      // padding-right: 50%;
+      padding-right: 30%;
+      @media screen and (max-width: $break-small-med) {
+        // height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media screen and (max-width: $break-medium) {
+        padding-right: 25%;
+      }
+      .subtitle-long{
+        display:block;
+        @media screen and (max-width: $break-large) {display:block;}
+        @media screen and (max-width: $break-small-med) {display:none;}
+      }
+      .subtitle-short{
+        display:none;
+        @media screen and (max-width: $break-large) {display:none;}
+        @media screen and (max-width: $break-small-med) {display:block;}
+      }
     }
     .about-text {
-      padding-right: 30%;
+      // padding-right: 30%;
+      @media screen and (max-width: $break-small-med) {
+        // height: 50vh;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media screen and (max-width: $break-medium) {
+        padding-right: 15%;
+      }
+      .text-short{
+        display:none;
+        @media screen and (max-width: $break-large) {display:none;}
+        @media screen and (max-width: $break-medium) {display:block;}
+        @media screen and (max-width: $break-small-med) {display:block;}
+      }
+      .text-long{
+        @media screen and (max-width: $break-large) {display:block;}
+        @media screen and (max-width: $break-medium) {display:none;}
+        @media screen and (max-width: $break-small-med) {display:none;}
+      }
       p{
         padding-bottom: 1.5em;
       }

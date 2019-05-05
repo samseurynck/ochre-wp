@@ -18,12 +18,22 @@ $lpurple: #DDD4D7;
 $dbrown: #946C54;
 $lbrown: #C6B6AD;
 
-
+body{
+  font-family: 'BaskervilleBT-Roman', serif;
+  font-weight: normal;
+  font-style: normal;
+}
 
 .block1{
   h1 {
     font-size: 1em;
     letter-spacing: 2px;
+    font-family: 'BaskervilleBT-Roman', serif;
+	  font-weight: normal;
+	  font-style: normal;
+    @media screen and (max-width: $break-medium) {
+      font-size: 1.25em;
+    }
   }
 
   h2 {
@@ -31,46 +41,43 @@ $lbrown: #C6B6AD;
     letter-spacing: 1.5px;
   }
 
-  .hours-list,
-  .location-list {
+  #hours-list,
+  #location-list {
     font-size: .75em;
     line-height: .75em;
     letter-spacing: .5px;
   }
-
-  // h1 {
-  //   font-size: 1em;
-  //   letter-spacing: 2px;
-  // }
-  //
-  // h2 {
-  //   font-size: .5em;
-  //   letter-spacing: 1.5px;
-  // }
-  //
-  // .hours-list,
-  // .location-list {
-  //   font-size: .6em;
-  //   line-height: .75em;
-  //   letter-spacing: .5px;
-  // }
 }
 
 .block2{
+  // ul{
+  //   font-size: 1.25em;
+  //   line-height: 3em;
+  // }
   ul{
-    font-size: 1.25em;
-    line-height: 3em;
+    font-size: 1.5em;
+    line-height: 1.25em;
   }
 }
 
 .block3{
   .about-subtitle{
-    font-size: .75em;
+    // font-size: .75em;
+    font-size: 1em;
     line-height: 1.75em;
+    @media screen and (max-width: $break-medium) {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
   }
   .about-text{
-    font-size: .5em;
-    line-height: 2em;
+    // font-size: .5em;
+    font-size: .75em;
+    line-height: 1.5em;
 
+    @media screen and (max-width: $break-medium) {
+      // font-size: .75em;
+      line-height: 2em;
+    }
   }
 }

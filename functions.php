@@ -11,6 +11,28 @@
 
 // Load any external files you have here
 
+automatic_feed_links();
+
+if ( !is_admin() ) {
+
+  $url = get_stylesheet_directory_uri() . '/js/';
+
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ($url.'jquery.min.js'), true, '2.0.0', true );
+  wp_register_script('jquery-ui', ($url.'jquery-ui.min.js'), true, '', true );
+
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('jquery-ui');
+
+  // THESE SHOULD BE SWAPPED AT SOME POINT!!
+  // wp_enqueue_script( 'plugins', "{$url}plugins.min.js", array('jquery'), null, true );
+  // wp_enqueue_script( 'app', "{$url}app.min.js", array('jquery'), null, true );
+  wp_enqueue_script( 'plugins', "{$url}/x/plugins.js", array('jquery'), null, true );
+  wp_enqueue_script( 'app', "{$url}/x/app.js", array('jquery'), null, true );
+}
+
+$ajax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
@@ -39,11 +61,14 @@ if (function_exists('add_theme_support'))
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 
     // THESE SHOULD BE SWAPPED AT SOME POINT!!
-    wp_enqueue_script( 'plugins', "{$url}/js/plugins.min.js", array('jquery'), null, true );
-    wp_enqueue_script( 'app', "{$url}/js/app.min.js", array('jquery'), null, true );
-    // wp_enqueue_script( 'plugins', "{$url}/x/plugins.js", array('jquery'), null, true );
-    // wp_enqueue_script( 'app', "{$url}/x/app.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'plugins', "{$url}/wp-content/themes/ochre-wp/js/plugins.min.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'app', "{$url}/wp-content/themes/ochre-wp/js/app.min.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'plugins', "{$url}/wp-content/themes/ochre-wp/js/x/plugins.js", array('jquery'), null, true );
+    // wp_enqueue_script( 'app', "{$url}/wp-content/themes/ochre-wp/js/x/app.js", array('jquery'), null, true );
 }
+
+// $ajax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+
 
 /*------------------------------------*\
 	Functions
