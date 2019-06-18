@@ -82,6 +82,23 @@
 				</svg>
 		    <!-- <img src="http://placekitten.com/502/609"> -->
 
+				<?php
+					$tempImage = get_field('temporary_announcement_image');
+					$tempText = get_field('temporary_announcement_text');
+					$image_toggle = get_field('image_toggle');
+
+					if( $image_toggle ) {
+						if( $tempImage ) {
+							if( $tempText ) {
+								 echo '<p class="temporary-text">'. $tempText .'</p>';
+							}
+							 echo '<div class="temporary-image tlBstretch" data-image-src="'. $tempImage .'"></div>';
+						}
+					} else {
+						echo '<div class="permanent-image tlBstretch" data-image-src=""></div>';
+					}
+				 ?>
+
 		  </div>
 
 		  <div class="shape-container" id="shape-tr">

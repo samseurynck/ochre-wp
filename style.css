@@ -2638,6 +2638,42 @@ svg {
       left: 0;
       order: 1;
       min-height: 180px; } }
+  #shape-tl .tlBstretch {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  #shape-tl .temporary-text {
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    text-align: center;
+    z-index: 2;
+    color: #874E11;
+    font-style: italic;
+    padding: 10px;
+    margin: 80px 10% 70px 10%;
+    background: white;
+    -webkit-box-shadow: 0px 0px 11px 13px white;
+    -moz-box-shadow: 0px 0px 11px 13px white;
+    box-shadow: 0px 0px 11px 13px white; }
+    @media screen and (max-width: 900px) {
+      #shape-tl .temporary-text {
+        width: 100%;
+        margin: 0;
+        padding: 80px 40px 40px 40px;
+        background: white;
+        background: linear-gradient(0deg, white 50%, rgba(255, 255, 255, 0) 95%);
+        color: #874E11;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; } }
+    @media screen and (max-width: 425px) {
+      #shape-tl .temporary-text {
+        padding: 80px 20px 20px 20px; } }
+  #shape-tl .temporary-image {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    mix-blend-mode: screen; }
   #shape-tl img {
     position: absolute;
     height: 100%;
