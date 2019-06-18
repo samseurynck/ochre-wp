@@ -36,6 +36,27 @@ $black: #020302;
   -webkit-transform: rotate(-1deg); /* Safari 3-8 */
   transform: rotate(-1deg);
 }
+//MIN HEIGHT DESKTOP
+@mixin desktopMinHeightBody{
+  min-height: 1132px;
+}
+@mixin desktopMinHeightElements{
+  min-height: 662px;
+}
+//MIN HEIGHT TABLET
+@mixin tabletMinHeightBody{
+  min-height: 800px;
+}
+@mixin tabletMinHeightElements{
+  min-height: 400px;
+}
+//MIN HEIGHT MOBILE
+@mixin mobileMinHeightBody{
+  min-height: 1440px;
+}
+@mixin mobileMinHeightElements{
+  min-height: 180px;
+}
 
 // Global
 li,
@@ -63,15 +84,39 @@ body {
   width: 100%;
   height: 200vh;
   position: absolute;
-
+  @include desktopMinHeightBody;
 
   @media screen and (max-width: $break-medium) {
     min-width: 700px;
     height: 100vh;
+    @include tabletMinHeightBody;
   }
   @media screen and (max-width: $break-small-med) {
     min-width: 0px;
     height: 200vh;
+    @include mobileMinHeightBody;
+  }
+}
+
+.outer-shape-container{
+  position: absolute;
+  margin:0;
+  padding:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height:200vh;
+  display: flex;
+  flex-wrap: wrap;
+  @include desktopMinHeightBody;
+
+  @media screen and (max-width: $break-medium) {
+    height:100vh;
+    @include tabletMinHeightBody;
+  }
+  @media screen and (max-width: $break-small-med) {
+    height:200vh;
+    @include mobileMinHeightBody;
   }
 }
 
@@ -89,25 +134,28 @@ svg {
 }
 
 .shape-container {
-  position: absolute;
+  position: relative;
 }
 
 #shape-tl {
   width: 51%;
-  height: 102vh;
+  height:50%;
   background: #874E11;
   left: -5px;
   z-index: 1;
-  // background-image: url("assets/tile.png");
+  @include desktopMinHeightElements;
+
+  @media screen and (max-width: $break-medium) {
+    height:50%;
+    @include tabletMinHeightElements;
+  }
   @media screen and (max-width: $break-small-med) {
     width:100%;
-    height:50vh;
+    height:25%;
     left:0;
-    // background-image: url("assets/sm_tile.png");
+    order:1;
+    @include mobileMinHeightElements;
     }
-  @media screen and (max-width: $break-medium) {
-    height: 52vh;
-  }
   img {
     position: absolute;
     height: 100%;
@@ -123,45 +171,56 @@ svg {
 
 #shape-tr {
   width: 48%;
-  height: 100vh;
+  height:50%;
   right: 0;
+  @include desktopMinHeightElements;
+  @media screen and (max-width: $break-medium) {
+    height: 50%;
+    @include tabletMinHeightElements;
+  }
   @media screen and (max-width: $break-small-med) {
     width:100%;
-    height: 50vh;
-    top:100vh;
-  }
-  @media screen and (max-width: $break-medium) {
-    height: 50vh;
+    height:25%;
+    order:3;
+    margin-top: -10px;
+    @include mobileMinHeightElements;
   }
 }
 
 #shape-bl {
   width: 50%;
-  height: 102vh;
+  height:50%;
   left: 0;
-  bottom: 0;
+  @include desktopMinHeightElements;
+
+  @media screen and (max-width: $break-medium) {
+    height:50%;
+    @include tabletMinHeightElements;
+  }
   @media screen and (max-width: $break-small-med) {
     width:100%;
-    height: 50vh;
-    top: 50vh;
-  }
-  @media screen and (max-width: $break-medium) {
-    height: 52vh;
+    height: 25%;
+    order:2;
+    margin-top:-9px;
+    @include mobileMinHeightElements;
   }
 }
 
 #shape-br {
-  width: 48%;
-  height: 102vh;
+  width: 50%;
+  height:50%;
   right: 0;
-  bottom: 0;
+  @include desktopMinHeightElements;
+
+  @media screen and (max-width: $break-medium) {
+    height:50%;
+    @include tabletMinHeightElements;
+  }
   @media screen and (max-width: $break-small-med) {
     width:100%;
-    height: 50vh;
-    top: 150vh;
-  }
-  @media screen and (max-width: $break-medium) {
-    height: 52vh;
+    height: 25%;
+    order:4;
+    @include mobileMinHeightElements;
   }
 }
 
@@ -171,31 +230,46 @@ svg {
   flex-wrap: wrap;
   color: white;
 
+  .mobile-spacer{
+    display: none;
+    @media screen and (max-width: $break-small-med) {
+      display: block;
+      width:100%;
+      height:25%;
+      position: relative;
+      margin:0;
+      padding:0;
+    }
+
+  }
+
   .block1 {
     width: 50%;
-    height: 80vh;
-    // margin-left: 50%;
-    margin: 10vh 10vh 10vh 50%;
-    padding: 0 3em 0 4em;
+    height: 50%;
+    margin: 0 0 0 50%;
+    padding: 0 3em 3em 4em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    @include desktopMinHeightElements;
+    // border: solid 1px pink;
 
     @media screen and (max-width: $break-medium) {
       width:50%;
-      height: 50vh;
-      // top:50vh;
+      height: 50%;
       justify-content: flex-end;
       margin: 0 0 0 50%;
       padding: 0 4em 4em 4em;
+      @include tabletMinHeightElements;
     }
     @media screen and (max-width: $break-small-med) {
       width:100%;
-      height: 50vh;
-      top:50vh;
-      margin:50vh 0 0 0;
+      height: 25%;
+      // height: calc(25% - 10px);
+      margin:0 0 0 0;
       padding: 2em 4em 4em 4em;
       justify-content: flex-start;
+      @include mobileMinHeightElements;
     }
 
     h1 {
@@ -206,7 +280,7 @@ svg {
       }
       @media screen and (max-width: $break-small-med) {
         text-align: center;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
       }
     }
 
@@ -244,7 +318,6 @@ svg {
 
     #location-title{
       @media screen and (max-width: $break-medium) {
-        // margin-left: $spacing*2;
         margin-left: 0;
       }
       @media screen and (max-width: $break-small-med) {
@@ -255,7 +328,6 @@ svg {
     #location-list{
       @include negRotate;
       @media screen and (max-width: $break-medium) {
-        // margin-left: $spacing*2;
         margin-left: 0;
       }
       @media screen and (max-width: $break-small-med) {
@@ -275,53 +347,62 @@ svg {
   }
   .block2 {
     width: 50%;
-    height: 100vh;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 4em 0 4em;
+    padding: 0 5em 0 4em;
     color: #141731;
     font-weight: bold;
+    @include desktopMinHeightElements;
+
     @media screen and (max-width: $break-medium) {
-      height: 50vh;
+      height: 50%;
       padding: 0 4em 1em 4em;
+      @include tabletMinHeightElements;
     }
     @media screen and (max-width: $break-small-med) {
       width:100%;
-      height: 50vh;
-      top:100vh;
+      height: 25%;
+      top:50%;
       padding: 0 6em 0 3em;
       color: #874E11;
+      margin-top: -9px;
+      @include mobileMinHeightElements;
+    }
+    li{
+      padding-bottom: 1em;
     }
   }
+
   .block3 {
     width: 50%;
-    // height: 75vh;
-    // margin: 10vh 0 15vh 0;
-    padding: 0 3em 0 4em;
+    height: 50%;
+    padding: 0 5em 0 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include desktopMinHeightElements;
+
     @media screen and (max-width: $break-medium) {
-      height: 50vh;
+      height: 50%;
       margin:0;
       padding: 0 3em 0 4em;
+      @include tabletMinHeightElements;
     }
     @media screen and (max-width: $break-small-med) {
       width:100%;
-      height: 52vh;
+      height: 25%;
       top:100vh;
       margin: 0;
       display: flex;
+      @include mobileMinHeightElements;
     }
 
     .about-subtitle {
-      margin-bottom: 1em;
-      // padding-right: 50%;
-      padding-right: 30%;
+      padding: 0 30% 1em 0;
       @media screen and (max-width: $break-small-med) {
-        // height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -341,9 +422,7 @@ svg {
       }
     }
     .about-text {
-      // padding-right: 30%;
       @media screen and (max-width: $break-small-med) {
-        // height: 50vh;
         padding-right: 0;
         display: flex;
         flex-direction: column;
@@ -364,7 +443,8 @@ svg {
         @media screen and (max-width: $break-small-med) {display:none;}
       }
       p{
-        padding-bottom: 1.5em;
+        margin:0;
+        padding: 1em 0 1.5em 0;
       }
     }
   }

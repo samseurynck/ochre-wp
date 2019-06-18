@@ -50,10 +50,6 @@ body{
 }
 
 .block2{
-  // ul{
-  //   font-size: 1.25em;
-  //   line-height: 3em;
-  // }
   ul{
     font-size: 1.5em;
     line-height: 1.25em;
@@ -62,21 +58,20 @@ body{
 
 .block3{
   .about-subtitle{
-    // font-size: .75em;
+    margin:0;
     font-size: 1em;
-    line-height: 1.75em;
+    line-height: 1.5em;
     @media screen and (max-width: $break-medium) {
       font-size: 1em;
       line-height: 1.5em;
     }
   }
   .about-text{
-    // font-size: .5em;
+    margin:0;
     font-size: .75em;
     line-height: 1.5em;
 
     @media screen and (max-width: $break-medium) {
-      // font-size: .75em;
       line-height: 2em;
     }
   }

@@ -26,8 +26,7 @@ function backstretchIt(){
   $("#shape-tl").backstretch([
     [
       { width: 1080, url: "http://localhost:8081/wordpress/wp-content/themes/ochre-wp/assets/tile.png" },
-      { width: 720, url: "http://localhost:8081/wordpress/wp-content/themes/ochre-wp/assets/tile.png" },
-      { width: 320, url: "http://localhost:8081/wordpress/wp-content/themes/ochre-wp/assets/sm_tile.png" }
+      { width: 425, url: "http://localhost:8081/wordpress/wp-content/themes/ochre-wp/assets/sm_tile.png" }
     ]
   ]);
 }

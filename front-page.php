@@ -6,6 +6,8 @@
 
 		  <div class="text">
 
+				<div class="mobile-spacer"></div>
+
 		    <div class="block1">
 		      <h1>
 		        OCHRE <br>BAKERY
@@ -17,7 +19,7 @@
 						<ul id="hours-list">
 						<?php if( have_rows('hours') ): while ( have_rows('hours') ) : the_row(); ?>
 
-						        <li><?php the_sub_field('days'); ?> <?php the_sub_field('opening_time'); ?> to <?php the_sub_field('closing_time'); ?></li>
+						        <li><?php the_sub_field('hour-line'); ?></li>
 
 										<?php
 						    endwhile;
@@ -44,7 +46,8 @@
 		    </div>
 		    <nav class="block2">
 		      <ul>
-						<li>Menus, wholesale orders and catering information coming soon!</li>
+						<li>For information on catering & special orders, contact hello@ochrebakery.com.</li>
+						<li>Online menus coming soon!</li>
 		        <!-- <li>cafe</li>
 		        <li>bakery</li>
 		        <li>catering</li>
@@ -67,6 +70,8 @@
 		      </div>
 		    </div>
 		  </div>
+
+			<div class="outer-shape-container">
 
 		  <div class="shape-container" id="shape-tl">
 
@@ -116,6 +121,8 @@
 		    </g>
 		</svg>
 		  </div>
+
+		</div>
 
 
 		</div>

@@ -237,13 +237,15 @@ body {
   line-height: 1.25em; }
 
 .block3 .about-subtitle {
+  margin: 0;
   font-size: 1em;
-  line-height: 1.75em; }
+  line-height: 1.5em; }
   @media screen and (max-width: 900px) {
     .block3 .about-subtitle {
       font-size: 1em;
       line-height: 1.5em; } }
 .block3 .about-text {
+  margin: 0;
   font-size: .75em;
   line-height: 1.5em; }
   @media screen and (max-width: 900px) {
@@ -2569,17 +2571,40 @@ body {
 .text {
   width: 100%;
   height: 200vh;
-  position: absolute; }
+  position: absolute;
+  min-height: 1132px; }
   @media screen and (max-width: 900px) {
     .container,
     .text {
       min-width: 700px;
-      height: 100vh; } }
+      height: 100vh;
+      min-height: 800px; } }
   @media screen and (max-width: 425px) {
     .container,
     .text {
       min-width: 0px;
-      height: 200vh; } }
+      height: 200vh;
+      min-height: 1440px; } }
+
+.outer-shape-container {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 1132px; }
+  @media screen and (max-width: 900px) {
+    .outer-shape-container {
+      height: 100vh;
+      min-height: 800px; } }
+  @media screen and (max-width: 425px) {
+    .outer-shape-container {
+      height: 200vh;
+      min-height: 1440px; } }
 
 svg {
   position: absolute;
@@ -2593,22 +2618,26 @@ svg {
   fill: white; }
 
 .shape-container {
-  position: absolute; }
+  position: relative; }
 
 #shape-tl {
   width: 51%;
-  height: 102vh;
+  height: 50%;
   background: #874E11;
   left: -5px;
-  z-index: 1; }
+  z-index: 1;
+  min-height: 662px; }
+  @media screen and (max-width: 900px) {
+    #shape-tl {
+      height: 50%;
+      min-height: 400px; } }
   @media screen and (max-width: 425px) {
     #shape-tl {
       width: 100%;
-      height: 50vh;
-      left: 0; } }
-  @media screen and (max-width: 900px) {
-    #shape-tl {
-      height: 52vh; } }
+      height: 25%;
+      left: 0;
+      order: 1;
+      min-height: 180px; } }
   #shape-tl img {
     position: absolute;
     height: 100%;
@@ -2619,73 +2648,94 @@ svg {
 
 #shape-tr {
   width: 48%;
-  height: 100vh;
-  right: 0; }
+  height: 50%;
+  right: 0;
+  min-height: 662px; }
+  @media screen and (max-width: 900px) {
+    #shape-tr {
+      height: 50%;
+      min-height: 400px; } }
   @media screen and (max-width: 425px) {
     #shape-tr {
       width: 100%;
-      height: 50vh;
-      top: 100vh; } }
-  @media screen and (max-width: 900px) {
-    #shape-tr {
-      height: 50vh; } }
+      height: 25%;
+      order: 3;
+      margin-top: -10px;
+      min-height: 180px; } }
 
 #shape-bl {
   width: 50%;
-  height: 102vh;
+  height: 50%;
   left: 0;
-  bottom: 0; }
+  min-height: 662px; }
+  @media screen and (max-width: 900px) {
+    #shape-bl {
+      height: 50%;
+      min-height: 400px; } }
   @media screen and (max-width: 425px) {
     #shape-bl {
       width: 100%;
-      height: 50vh;
-      top: 50vh; } }
-  @media screen and (max-width: 900px) {
-    #shape-bl {
-      height: 52vh; } }
+      height: 25%;
+      order: 2;
+      margin-top: -9px;
+      min-height: 180px; } }
 
 #shape-br {
-  width: 48%;
-  height: 102vh;
+  width: 50%;
+  height: 50%;
   right: 0;
-  bottom: 0; }
+  min-height: 662px; }
+  @media screen and (max-width: 900px) {
+    #shape-br {
+      height: 50%;
+      min-height: 400px; } }
   @media screen and (max-width: 425px) {
     #shape-br {
       width: 100%;
-      height: 50vh;
-      top: 150vh; } }
-  @media screen and (max-width: 900px) {
-    #shape-br {
-      height: 52vh; } }
+      height: 25%;
+      order: 4;
+      min-height: 180px; } }
 
 .text {
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
   color: white; }
+  .text .mobile-spacer {
+    display: none; }
+    @media screen and (max-width: 425px) {
+      .text .mobile-spacer {
+        display: block;
+        width: 100%;
+        height: 25%;
+        position: relative;
+        margin: 0;
+        padding: 0; } }
   .text .block1 {
     width: 50%;
-    height: 80vh;
-    margin: 10vh 10vh 10vh 50%;
-    padding: 0 3em 0 4em;
+    height: 50%;
+    margin: 0 0 0 50%;
+    padding: 0 3em 3em 4em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    min-height: 662px; }
     @media screen and (max-width: 900px) {
       .text .block1 {
         width: 50%;
-        height: 50vh;
+        height: 50%;
         justify-content: flex-end;
         margin: 0 0 0 50%;
-        padding: 0 4em 4em 4em; } }
+        padding: 0 4em 4em 4em;
+        min-height: 400px; } }
     @media screen and (max-width: 425px) {
       .text .block1 {
         width: 100%;
-        height: 50vh;
-        top: 50vh;
-        margin: 50vh 0 0 0;
+        height: 25%;
+        margin: 0 0 0 0;
         padding: 2em 4em 4em 4em;
-        justify-content: flex-start; } }
+        justify-content: flex-start;
+        min-height: 180px; } }
     .text .block1 h1 {
       margin-bottom: 3em; }
       @media screen and (max-width: 900px) {
@@ -2694,7 +2744,7 @@ svg {
       @media screen and (max-width: 425px) {
         .text .block1 h1 {
           text-align: center;
-          margin-bottom: 2em; } }
+          margin-bottom: 1em; } }
     .text .block1 h2 {
       margin-bottom: 2.5em;
       -ms-transform: rotate(-1deg);
@@ -2752,46 +2802,55 @@ svg {
       margin-bottom: 1em; }
   .text .block2 {
     width: 50%;
-    height: 100vh;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 4em 0 4em;
+    padding: 0 5em 0 4em;
     color: #141731;
-    font-weight: bold; }
+    font-weight: bold;
+    min-height: 662px; }
     @media screen and (max-width: 900px) {
       .text .block2 {
-        height: 50vh;
-        padding: 0 4em 1em 4em; } }
+        height: 50%;
+        padding: 0 4em 1em 4em;
+        min-height: 400px; } }
     @media screen and (max-width: 425px) {
       .text .block2 {
         width: 100%;
-        height: 50vh;
-        top: 100vh;
+        height: 25%;
+        top: 50%;
         padding: 0 6em 0 3em;
-        color: #874E11; } }
+        color: #874E11;
+        margin-top: -9px;
+        min-height: 180px; } }
+    .text .block2 li {
+      padding-bottom: 1em; }
   .text .block3 {
     width: 50%;
-    padding: 0 3em 0 4em;
+    height: 50%;
+    padding: 0 5em 0 4em;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    min-height: 662px; }
     @media screen and (max-width: 900px) {
       .text .block3 {
-        height: 50vh;
+        height: 50%;
         margin: 0;
-        padding: 0 3em 0 4em; } }
+        padding: 0 3em 0 4em;
+        min-height: 400px; } }
     @media screen and (max-width: 425px) {
       .text .block3 {
         width: 100%;
-        height: 52vh;
+        height: 25%;
         top: 100vh;
         margin: 0;
-        display: flex; } }
+        display: flex;
+        min-height: 180px; } }
     .text .block3 .about-subtitle {
-      margin-bottom: 1em;
-      padding-right: 30%; }
+      padding: 0 30% 1em 0; }
       @media screen and (max-width: 425px) {
         .text .block3 .about-subtitle {
           display: flex;
@@ -2846,6 +2905,7 @@ svg {
       .text .block3 .about-text .text-long {
         display: none; } }
     .text .block3 .about-text p {
-      padding-bottom: 1.5em; }
+      margin: 0;
+      padding: 1em 0 1.5em 0; }
 
 /*# sourceMappingURL=style.css.map */
